@@ -1,16 +1,50 @@
-# Vue 3 + TypeScript + Vite
+### Coinbase 
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+- A Vue Coinbase project built with Vue 3, TypeScript, TailwindCss, heroicons/vue, millify and vue3-smooth-scroll. 
+- This project will enable you to learn how to use Rapid Api to fetch data from one of its huge collection of APIs.
 
-## Recommended IDE Setup
+#### Install
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- Server -> Debian fork ubt 20x
 
-## Type Support For `.vue` Imports in TS
+- Install Yarn 
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+``` curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - ```
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+``` echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list ```
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+``` sudo apt update ```
+
+``` sudo apt install yarn ```
+
+- The command above will also install Node.js . If you installed Node trough nvm, skip the Node.js installation with:
+
+``` sudo apt install --no-install-recommends yarn ```
+
+- If you don thave nvm use the following --> https://heynode.com/tutorial/install-nodejs-locally-nvm
+
+``` curl -sL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh -o install_nvm.sh ```
+
+``` bash install_nvm.sh ```
+
+``` source ~/.bash_profile ```
+
+``` export NVM_DIR="$HOME/.nvm" ```
+``` [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm ```
+``` [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion ```
+
+``` nvm use ``` # there is a .nvmrc that you can use ^_^
+
+``` yarn ``` # Installs Dependencies
+
+``` yarn start ``` Starts the App
+
+Install pm2 for fork process on shell ``` npm install pm2 -g ```
+
+``` start with pm2 --name Tornado start yarn -- dev ```
+
+#### Troubleshooting
+
+- Error: ENOSPC: System limit for number of file watchers reached
+
+``` echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p ```
