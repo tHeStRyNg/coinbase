@@ -1,7 +1,7 @@
 ### Coinbase 
 
 - A Vue Coinbase project built with Vue 3, TypeScript, TailwindCss, heroicons/vue, millify and vue3-smooth-scroll. 
-- This project will enable you to learn how to use Rapid Api to fetch data from one of its huge collection of APIs.
+- This project is a similar froontend like Coinbase and will enable you to learn how to use Rapid Api to fetch data from one of its huge collection of APIs.
 
 #### Install
 
@@ -33,15 +33,15 @@
 ``` [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm ```
 ``` [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion ```
 
-``` nvm use ``` # there is a .nvmrc that you can use ^_^
+``` nvm use ``` # there is a .nvmrc that you can use ^_^ ver 16.14
 
 ``` yarn ``` # Installs Dependencies
 
-``` yarn start ``` Starts the App
+``` yarn dev ``` Starts the App
 
 Install pm2 for fork process on shell ``` npm install pm2 -g ```
 
-``` start with pm2 --name Tornado start yarn -- dev ```
+``` start with pm2 --name Tornado start dev -- dev ```
 
 #### Troubleshooting
 
